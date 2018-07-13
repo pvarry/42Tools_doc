@@ -1,0 +1,19 @@
+<ul class="doc-side-nav doc-side-nav-tutorial">
+	{% assign current = page.url | downcase | split: '/' %}
+    <h5 class="doc-side-nav-title">Tutorial</h5>
+    <li class="submenu">
+        <h6 class="arrow-r">/auth</h6>
+        <div class="submenu-content">
+            <a class="submenu-link {% if current[4] == 'with-42.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/reference/auth/with-42.html">With 42</a>
+        </div>
+    </li>
+    <li class="submenu">
+        <h6 class="arrow-r">/friends</h6>
+        <div class="submenu-content">
+            <a class="submenu-link {% if current[4] == 'friends_index.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/reference/friends/friends_index.html">GET /friends</a>
+            <a class="submenu-link {% if current[4] == 'friends_show.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/reference/friends/friends_show.html">GET /friends/:id</a>
+            <a class="submenu-link {% if current[4] == 'friends_create.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/reference/friends/friends_create.html">POST /friends</a>
+            <a class="submenu-link {% if current[4] == 'friends_destroy.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/reference/friends/friends_destroy.html">DELETE /friends/:id</a>
+        </div>
+    </li>
+ </ul>
